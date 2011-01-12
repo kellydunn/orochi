@@ -1,9 +1,7 @@
 require 'active_record'
-require 'active_support/core_ext'
+require 'acts_as_routeable/acts_as_routeable'
 
-require File.join(File.dirname(__FILE__), "acts_as_routeable/railtie")
-
-module ActsAsRouteable
-  autoload :Hook, File.join(File.dirname(__FILE__), "acts_as_routeable/hook")
-  autoload :InstanceMethods. File.join(File.dirname(__FILE__), "acts_as_routeable/instance_methods")
+if defined?(ActiveRecord::Base)
+  ActiveRecord::Base.extend ActsAsRouteable
+  ActiveRecord::Base.send :include, ActsAsRouteable
 end
