@@ -4,7 +4,7 @@ require 'acts_as_routeable'
 module ActsAsRouteable
   class Railtie < Rails::Railtie
     config.to_preapre do
-      ApplicationController.send(:extend, ActsAsRouteable::Hook) 
+      ActiveRecord::Base.send(:include, ActsAsRouteable::Hook) 
     end
   end
 end
