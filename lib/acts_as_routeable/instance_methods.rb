@@ -1,5 +1,6 @@
 module ActsAsRouteable::InstanceMethods
-  # has_many routes or has_one route? hmmm
+  # for now, until I get a better architecture sense of what's going on
+  belongs_to :route
   # instance methods go here!
 
   # TODO return constructed directions_json
