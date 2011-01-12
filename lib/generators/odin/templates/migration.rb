@@ -1,4 +1,4 @@
-class OdinInitMigration < ActiveRecord::Migration
+class OdinMigration < ActiveRecord::Migration
   def self.up
     create_table :routes do |t|
       t.timestamps
