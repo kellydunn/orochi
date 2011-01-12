@@ -9,4 +9,9 @@ module ActsAsRouteable::InstanceMethods
   # TODO Return constrcuted polyline_json
   def path
   end
+
+  # TODO Return whether or not the point
+  # is contained within a certain amount of polyline_json
+  def contains?(point, within = .25)
+  end
 end
