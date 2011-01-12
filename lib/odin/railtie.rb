@@ -10,9 +10,13 @@ module Odin
 
     rake_tasks do
       namespace :odin do
+
         desc "runs all necessary database migrations to operate squire"
-        task :init do
-          puts "TODO database migrations"
+        task :awaken => :environment do
+          puts "===ODIN AWAKENS==="
+          %x{rails g odin}
+          %x{rake db:migrate}
+          puts "===ARISE, ODIN!==="
         end
       end
     end
