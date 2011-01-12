@@ -35,7 +35,6 @@ Gem::Specification.new do |s|
     "lib/generators/odin/templates/migration.rb",
     "lib/odin.rb",
     "lib/odin/railtie.rb",
-    "odin-0.0.0.gem",
     "odin.gemspec",
     "spec/odin_spec.rb",
     "spec/spec_helper.rb"
