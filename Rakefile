@@ -15,8 +15,8 @@ Jeweler::Tasks.new do |gem|
   gem.name = "odin"
   gem.homepage = "http://github.com/kellydunn/odin"
   gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
+  gem.summary = %Q{A simpler way to do routes}
+  gem.description = %Q{A Ruby Gem that helps you ActiveRecord-ize Routes and routing information.  Polylines, directions, OOP, and all that jazz}
   gem.email = "defaultstring@gmail.com"
   gem.authors = ["kellydunn"]
   # Include your dependencies below. Runtime dependencies are required when using your gem,
