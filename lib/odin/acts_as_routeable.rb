@@ -1,7 +1,6 @@
 module Odin
-
   module ActsAsRouteable
-    def self.included(base)
+    def self.include(base)
       base.extend ClassMethods
     end
     

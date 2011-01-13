@@ -1,7 +1,12 @@
-if defined?(Rails)
-  require "odin/railtie.rb" 
-  require "odin/acts_as_routeable"
+require "active_model"
+require "active_record"
 
-  ActiveRecord::Base.send :include, Odin::ActsAsRouteable
+$LOAD_PATH.unshift(File.dirname(__FILE__))
+
+require "odin/acts_as_routeable"
+
+$LOAD_PATH.shift
+
+if defined?(ActiveRecord::Base)
+  Odin::ActsAsRouteable.include ActiveRecord::Base
 end
-
