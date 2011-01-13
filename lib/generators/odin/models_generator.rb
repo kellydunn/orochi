@@ -1,6 +1,6 @@
 require "rails/generators"
 
-class OdinModelsGenerator < Rails::Generators::Base
+class ModelsGenerator < Rails::Generators::Base
   def create_models
     dir_path = File.join(File.dirname(__FILE__), 'templates/models')
     Dir.new(dir_path).each do |file|
