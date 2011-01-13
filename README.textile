@@ -10,5 +10,5 @@ h2. usage
 
 pre.
 class YourModel < ActiveRecord::Base
-  acts_as_routeable
+acts_as_routeable
 end
