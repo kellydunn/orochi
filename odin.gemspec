@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["kellydunn"]
-  s.date = %q{2011-01-11}
+  s.date = %q{2011-01-13}
   s.description = %q{A Ruby Gem that helps you ActiveRecord-ize Routes and routing information.  Polylines, directions, OOP, and all that jazz}
   s.email = %q{defaultstring@gmail.com}
   s.extra_rdoc_files = [
@@ -27,13 +27,14 @@ Gem::Specification.new do |s|
     "README.textile",
     "Rakefile",
     "VERSION",
-    "lib/acts_as_routeable.rb",
-    "lib/acts_as_routeable/hook.rb",
-    "lib/acts_as_routeable/instance_methods.rb",
-    "lib/acts_as_routeable/railtie.rb",
-    "lib/generators/odin/odin_generator.rb",
+    "lib/generators/odin/migrations_generator.rb",
+    "lib/generators/odin/models_generator.rb",
     "lib/generators/odin/templates/migration.rb",
+    "lib/generators/odin/templates/models/leg.rb",
+    "lib/generators/odin/templates/models/route.rb",
+    "lib/generators/odin/templates/models/step.rb",
     "lib/odin.rb",
+    "lib/odin/acts_as_routeable.rb",
     "lib/odin/railtie.rb",
     "odin.gemspec",
     "spec/odin_spec.rb",
