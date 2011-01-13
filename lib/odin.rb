@@ -1,6 +1,7 @@
-module Odin
-  require "odin/railtie.rb" if defined?(Rails)
+if defined?(Rails)
+  require "odin/railtie.rb" 
+  require "odin/acts_as_routeable"
 
-  def acts_as_routeable
-  end
+  ActiveRecord::Base.send :include, Odin::ActsAsRouteable
 end
+
