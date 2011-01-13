@@ -4,6 +4,7 @@ require 'rails/generators/migration'
 # TODO seperating this content seems to
 # render all generators un-find-able :\
 class OdinGenerator < Rails::Generators::Base
+  source_root(File.join(File.dirname(__FILE__)))
 
   # Migrations
   include Rails::Generators::Migration
@@ -21,7 +22,7 @@ class OdinGenerator < Rails::Generators::Base
     dir_path = File.join(File.dirname(__FILE__), 'templates/models')
     Dir.new(dir_path).each do |file|
       if !File.directory?(file)
-        template file, 'app/models#{File.basename(file)}'
+        template "#{dir_path}/#{File.basename(file)}", "app/models/#{File.basename(file)}"
       end
     end
   end
