@@ -5,7 +5,7 @@
 
 Gem::Specification.new do |s|
   s.name = %q{odin}
-  s.version = "0.0.2"
+  s.version = "0.0.3"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["kellydunn"]
@@ -27,8 +27,7 @@ Gem::Specification.new do |s|
     "README.textile",
     "Rakefile",
     "VERSION",
-    "lib/generators/odin/migrations_generator.rb",
-    "lib/generators/odin/models_generator.rb",
+    "lib/generators/odin/odin_generator.rb",
     "lib/generators/odin/templates/migration.rb",
     "lib/generators/odin/templates/models/leg.rb",
     "lib/generators/odin/templates/models/route.rb",
