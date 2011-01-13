@@ -5,7 +5,8 @@ module Odin
   class Railtie < Rails::Railtie
 
     generators do
-      require File.join(File.dirname(__FILE__), "../generators/odin/odin_generator")
+      require File.join(File.dirname(__FILE__), "../generators/odin/migration_generator")
+      require File.join(File.dirname(__FILE__), "../generators/odin/models_generator")
     end
 
     rake_tasks do

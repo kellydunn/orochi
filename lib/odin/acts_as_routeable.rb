@@ -10,6 +10,8 @@ module Odin
 
         # Relationships to make routing work
         belongs_to :route
+        
+        
 
         send :extend, Odin::ActsAsRouteable::InstanceMethods 
       end

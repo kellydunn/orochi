@@ -1,7 +1,7 @@
 require 'rails/generators'
 require 'rails/generators/migration'
 
-class OdinGenerator < Rails::Generators::Base
+class MigrationGenerator < Rails::Generators::Base
   include Rails::Generators::Migration
 
   def self.next_migration_number(path)
