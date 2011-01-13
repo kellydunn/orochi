@@ -8,8 +8,6 @@ rake odin:awaken
 
 h2. usage
 
-In your model class
-
 pre.
 class YourModel < ActiveRecord::Base
   acts_as_routeable
