@@ -6,6 +6,7 @@ source "http://rubygems.org"
 gem 'geokit'
 gem 'geokit-rails'
 gem 'nayutaya-googlemaps-polyline'
+gem 'json'
 
 # Add dependencies to develop your gem here.
 # Include everything needed to run rake, tests, features, etc.

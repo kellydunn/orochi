@@ -19,11 +19,11 @@ module Odin
     end
     
     module InstanceMethods
-      def find_gdirections
+      def request_route
         request_str = "http://maps.googleapis.com/maps/api/directions/json?sensor=false&alternatives=true&"
 
         start = self.router.start
-        request_str += "origin=#{CGI::escape(start)}"
+        request_str += "origin=#{CGI::escape(start)}&"
 
         stop = self.router.stop
         request_str += "destination=#{CGI::escape(stop)}"
