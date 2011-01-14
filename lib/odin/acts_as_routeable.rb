@@ -18,11 +18,12 @@ module Odin
     end
     
     module InstanceMethods
-    
-      #TODO copy functionality from reroute
       def find_gdirections
-        start = self.router.start
-        stop = self.router.stop
+        request_str = "http://maps.googleapis.com/maps/api/directions/json?sensor=false&alternatives=true&"
+        request_str += "origin=#{CGI::escape(self.router.start)}"
+        request_str += "destination=#{CGI::escape(self.router.stop)}"
+        response = open(request_str)
+        return JSON.parse(response.read)
       end
 
       # TODO copy functionality from reroute
