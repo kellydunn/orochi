@@ -1,4 +1,4 @@
 run "echo \"gem 'odin'\" >> Gemfile"
-run "rake db:create:all"
-run "rake db:migrate"
-run "rake odin:awaken"
+run "rake db:create:all >> /dev/null"
+run "rake db:migrate >> /dev/null"
+run "rake odin:awaken >> /dev/null"
