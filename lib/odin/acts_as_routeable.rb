@@ -11,8 +11,9 @@ module Odin
       def acts_as_routeable(options = {})
         metaclass = (class << self; self; end)
 
-        # Relationships to make routing work
-        belongs_to :route
+        # TODO if you have many routes, then
+        # we need to have a foreign key of metaclass.class.id
+        has_many :routes
         
         send :extend, Odin::ActsAsRouteable::InstanceMethods 
       end
@@ -35,13 +36,9 @@ module Odin
       # talking to the same models inside of our gem
       # generated database
       def populate_polylines
-=begin
         json = find_gdirections
         json_routes = json["routes"]
         json_routes.each do |route|
-          
-          # Creating a polyline with each step in the
-          # polyline's points
           polyline = []
           route["legs"].each do |route_leg|
             route_leg["steps"].each do |leg_step|
@@ -55,7 +52,6 @@ module Odin
             polylines.create(:path_json => polyline.inspect)
           end
         end
-=end
       end
     end
   end
