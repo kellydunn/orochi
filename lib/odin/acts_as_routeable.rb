@@ -1,5 +1,6 @@
 require 'net/https'
 require 'open-uri'
+require 'json'
 
 module Odin
   module ActsAsRouteable
@@ -20,8 +21,13 @@ module Odin
     module InstanceMethods
       def find_gdirections
         request_str = "http://maps.googleapis.com/maps/api/directions/json?sensor=false&alternatives=true&"
-        request_str += "origin=#{CGI::escape(self.router.start)}"
-        request_str += "destination=#{CGI::escape(self.router.stop)}"
+
+        start = self.router.start
+        request_str += "origin=#{CGI::escape(start)}"
+
+        stop = self.router.stop
+        request_str += "destination=#{CGI::escape(stop)}"
+
         response = open(request_str)
         return JSON.parse(response.read)
       end
