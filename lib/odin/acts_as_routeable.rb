@@ -21,6 +21,8 @@ module Odin
     
       #TODO copy functionality from reroute
       def find_gdirections
+        start = self.router.start
+        stop = self.router.stop
       end
 
       # TODO copy functionality from reroute
