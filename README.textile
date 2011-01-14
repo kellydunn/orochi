@@ -10,3 +10,14 @@ h2. usage
 pre. class YourModel < ActiveRecord::Base
   acts_as_routeable
 end
+
+pre. rails generate migration add_router_id_to_your_model
+
+pre. class AddRouterIdToYourModel < ActiveRecord::Migration
+  self.up
+    add_column :your_models, :router_id, :integer, :references => :routers
+  end
+  self.down
+    remove_column :your_models, :router_id
+  end
+end
