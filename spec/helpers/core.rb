@@ -7,6 +7,8 @@ module CoreHelper
   end
   
   def destroy_rails_app
+    system("rm -rf gem_test")
+    Dir.chdir("../../")
   end
 end
 

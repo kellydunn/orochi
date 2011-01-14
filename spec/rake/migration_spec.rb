@@ -8,7 +8,7 @@ describe "Migration rake" do
   end
 
   after :each do
-    delete_rails_app
+    destroy_rails_app
   end
 
   it "should create all necessary migrations" do
@@ -18,5 +18,11 @@ describe "Migration rake" do
     success.should_not be_nil
   end
 
-  it "should automatically apply the necessary migrations"
+  it "should automatically apply the necessary migrations" do
+    Dir.chdir("gem_test")
+
+    # TODO find a less hacky way of testing this :\
+    system("rails console")
+    %x{r = Route.new}.should_not be_nil
+  end
 end

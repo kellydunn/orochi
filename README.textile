@@ -2,13 +2,11 @@ h1. odin
 
 h2. setup
 
-pre. 
-sudo gem install odin
+pre. sudo gem install odin
 rake odin:awaken
 
 h2. usage
 
-pre.
-class YourModel < ActiveRecord::Base
-acts_as_routeable
+pre. class YourModel < ActiveRecord::Base
+  acts_as_routeable
 end
