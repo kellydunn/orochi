@@ -1,6 +1,8 @@
 class OdinMigration < ActiveRecord::Migration
   def self.up
     create_table :routes do |t|
+      t.string :start
+      t.string :stop
       t.timestamps
     end
 

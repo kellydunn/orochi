@@ -8,6 +8,8 @@ module Odin
     end
     
     module ClassMethods
+      attr_accessor :start, :stop
+
       def acts_as_routeable(options = {})
         metaclass = (class << self; self; end)
 
