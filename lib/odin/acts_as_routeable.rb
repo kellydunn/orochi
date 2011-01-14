@@ -11,12 +11,9 @@ module Odin
       def acts_as_routeable(options = {})
         metaclass = (class << self; self; end)
 
-        # TODO if you have many routes, then
-        # we need to have a foreign key of metaclass.class.id
         belongs_to :router
 
-        # Just for starters        
-        send :extend, Odin::ActsAsRouteable::InstanceMethods 
+        send :include, Odin::ActsAsRouteable::InstanceMethods 
       end
     end
     
@@ -30,6 +27,9 @@ module Odin
       def populate_polylines
       end
 
+      def routes
+        self.router.routes
+      end
     end
   end
 end
