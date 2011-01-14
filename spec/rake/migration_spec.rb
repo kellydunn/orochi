@@ -5,8 +5,6 @@ describe "Migration rake" do
 
   before :each do
     create_rails_app
-    # ENV['RAILS_ENV'] = 'development'
-    # require File.expand_path(File.dirname(__FILE__) + "/../staging/gem_test/config/environment.rb")
   end
 
   after :each do
@@ -20,8 +18,5 @@ describe "Migration rake" do
     success.should_not be_nil
   end
 
-  it "should automatically apply the necessary migrations" do
-    # TODO find a less hacky way of testing this :\
-    Route.new.should_not be_nil
-  end
+  it "should automatically apply the necessary migrations"
 end
