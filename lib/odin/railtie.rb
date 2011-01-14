@@ -14,8 +14,8 @@ module Odin
         desc "runs all necessary database migrations to operate squire"
         task :awaken => :environment do
           puts "===ODIN AWAKENS==="
-          %x{rails g odin}
-          %x{rake db:migrate}
+          system("rails g odin")
+          system("rake db:migrate")
           puts "===ARISE, ODIN!==="
         end
       end
