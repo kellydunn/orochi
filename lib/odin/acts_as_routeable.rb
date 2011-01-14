@@ -13,7 +13,7 @@ module Odin
 
         # TODO if you have many routes, then
         # we need to have a foreign key of metaclass.class.id
-        has_many :routes
+        belongs_to :router
 
         # Just for starters        
         send :extend, Odin::ActsAsRouteable::InstanceMethods 

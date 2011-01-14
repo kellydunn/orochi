@@ -1,6 +1,11 @@
 class OdinMigration < ActiveRecord::Migration
   def self.up
+    create_table :routers do |t|
+      t.timestamps
+    end
+    
     create_table :routes do |t|
+      t.integer :router_id, :references => :routers
       t.timestamps
     end
 
@@ -18,6 +23,7 @@ class OdinMigration < ActiveRecord::Migration
   end
 
   def self.down
+    drop_table :routers
     drop_table :routes
     drop_table :legs
     drop_table :steps

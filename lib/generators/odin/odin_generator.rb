@@ -14,7 +14,7 @@ class OdinGenerator < Rails::Generators::Base
   end
   
   def create_migration_file
-    migration_template File.join(File.dirname(__FILE__), 'templates/migration.rb'), 'db/migrate/odin_migration'
+    migration_template File.join(File.dirname(__FILE__), 'templates/migrations/migration.rb'), 'db/migrate/odin_migration'
   end
 
   #Models
