@@ -1,5 +1,7 @@
 h1. orochi
 
+p. A ruby gem that helps ActiveRecord-ize directions and route data.
+
 h2. setup
 
 pre. sudo gem install orochi
@@ -7,11 +9,17 @@ rake orochi:awaken
 
 h2. usage
 
+p. Orochi needs to know which models you intend to make routeable.  So any model that has a start and stop destination can be represented as:
+
 pre. class YourModel < ActiveRecord::Base
   acts_as_routeable
 end
 
+p. Orochi still isn't quite smart enough to make the association on its own, so for the time being you will have to generate a migration:
+
 pre. rails generate migration add_router_id_to_your_model
+
+p. add in the necessary columns:
 
 pre. class AddRouterIdToYourModel < ActiveRecord::Migration
   self.up
@@ -21,6 +29,12 @@ pre. class AddRouterIdToYourModel < ActiveRecord::Migration
     remove_column :your_models, :router_id
   end
 end
+
+p. then run the migration:
+
+pre. db:migrate
+
+p. Now you're set up and ready to go!
 
 h2. ghetto usage
 
