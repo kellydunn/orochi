@@ -32,8 +32,34 @@ module Odin
         return JSON.parse(response.read)
       end
 
-      # TODO copy functionality from reroute
-      def populate_polylines
+      def route!
+        json = request_routes
+        json_routes = json["routes"]
+        json_routes.each do |route|
+          r = self.router.routes.create!
+
+          route["legs"].each do |route_leg|
+            l = r.legs.create!
+   
+            route_leg["steps"].each do |leg_step|
+              s = l.steps.create!
+
+              leg_points = leg_step["polyline"]["points"]
+              leg_levels = leg_step["polyline"]["levels"]
+              polyline_data = GoogleMapsPolyline.decode_polyline(leg_points, leg_levels)
+              
+              # TODO use inject
+              polyline = []
+              polyline_data.collect do |point|
+                polyline.push([point[0], point[1]])
+              end
+              
+              s.polyline_json = polyline
+              s.directions_json = leg_step.html_instructions
+              s.save!
+            end
+          end
+        end
       end
 
       def routes
