@@ -74,6 +74,15 @@ module Orochi
         self.router.stop = stop
         self.router.save!
       end
+
+      def polyline
+      end
+
+      def directions_to
+      end
+
+      def directions_from
+      end
     end
   end
 end
