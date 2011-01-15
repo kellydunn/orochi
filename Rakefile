@@ -15,8 +15,8 @@ Jeweler::Tasks.new do |gem|
   gem.name = "orochi"
   gem.homepage = "http://github.com/kellydunn/orochi"
   gem.license = "MIT"
-  gem.summary = %Q{TODO: An easy way to ActiveRecord-ize directions and route data}
-  gem.description = %Q{TODO: A ruby gem that helps ActiveRecord-ize directions and route data}
+  gem.summary = %Q{An easy way to ActiveRecord-ize directions and route data}
+  gem.description = %Q{A ruby gem that helps ActiveRecord-ize directions and route data}
   gem.email = "defaultstring@gmail.com"
   gem.authors = ["kellydunn"]
   # Include your dependencies below. Runtime dependencies are required when using your gem,

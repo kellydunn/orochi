@@ -9,7 +9,7 @@ module Orochi
     end
 
     rake_tasks do
-      namespace :odin do
+      namespace :orochi do
 
         desc "generates and runs all necessary migrations for orochi"
         task :awaken => :environment do
