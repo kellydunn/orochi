@@ -68,6 +68,12 @@ module Orochi
       def routes
         self.router.routes
       end
+
+      def set_endpoints!(start, stop)
+        self.router.start = start
+        self.router.stop = stop
+        self.router.save!
+      end
     end
   end
 end
