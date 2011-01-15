@@ -1,6 +1,8 @@
 require 'net/https'
 require 'open-uri'
 require 'json'
+require 'googlemaps_polyline/version'
+require 'googlemaps_polyline/core'
 
 module Odin
   module ActsAsRouteable
@@ -32,6 +34,7 @@ module Odin
         return JSON.parse(response.read)
       end
 
+
       def route!
         json = self.request_routes
         json_routes = json["routes"]
@@ -40,7 +43,7 @@ module Odin
 
           route["legs"].each do |route_leg|
             l = r.legs.create!
-   
+
             route_leg["steps"].each do |leg_step|
               s = l.steps.create!
 
