@@ -3,10 +3,10 @@ $LOAD_PATH.unshift(File.dirname(__FILE__))
 require 'rspec'
 require 'orochi'
 
-# Requires supporting files with custom matchers and macros, etc,
-# in ./support/ and its subdirectories.
 Dir["#{File.dirname(__FILE__)}/support/**/*.rb"].each {|f| require f}
+Dir["#{File.dirname(__FILE__)}/helpers/**/*.rb"].each {|f| require f}
+
+File.join(File.dirname(__FILE__))
 
 RSpec.configure do |config|
-  
 end
