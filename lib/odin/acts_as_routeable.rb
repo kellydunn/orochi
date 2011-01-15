@@ -58,7 +58,7 @@ module Odin
               end
               
               s.polyline_json = polyline
-              s.directions_json = leg_step.html_instructions
+              s.directions_json = leg_step["html_instructions"]
               s.save!
             end
           end
