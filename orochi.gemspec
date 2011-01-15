@@ -37,6 +37,8 @@ Gem::Specification.new do |s|
     "lib/orochi/acts_as_routeable.rb",
     "lib/orochi/railtie.rb",
     "lib/rails_templates/default_template.rb",
+    "orochi-0.0.0.gem",
+    "orochi.gemspec",
     "spec/helpers/core.rb",
     "spec/odin_spec.rb",
     "spec/rake/migration_spec.rb",
