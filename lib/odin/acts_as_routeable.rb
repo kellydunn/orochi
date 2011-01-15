@@ -19,7 +19,7 @@ module Odin
     end
     
     module InstanceMethods
-      def request_route
+      def request_routes
         request_str = "http://maps.googleapis.com/maps/api/directions/json?sensor=false&alternatives=true&"
 
         start = self.router.start
@@ -33,7 +33,7 @@ module Odin
       end
 
       def route!
-        json = request_routes
+        json = self.request_routes
         json_routes = json["routes"]
         json_routes.each do |route|
           r = self.router.routes.create!

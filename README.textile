@@ -26,4 +26,4 @@ h2. ghetto usage
 
 pre. your_model_instance.router.start = "a_start_address"
 your_model_instance.router.stop = "a_stop_address"
-your_model_instance.request_route # returns the json of google directions api
+your_model_instance.route!
