@@ -1,4 +1,4 @@
-require 'net/https'
+1;2305;0crequire 'net/https'
 require 'open-uri'
 require 'json'
 require 'googlemaps_polyline/version'

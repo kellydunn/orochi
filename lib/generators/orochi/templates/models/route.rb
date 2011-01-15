@@ -3,7 +3,7 @@ class Route < ActiveRecord::Base
 
   def each_step(&block)
     self.legs.each do |leg|
-      leg.each do |step|
+      leg.steps.each do |step|
         yield step
       end
     end
