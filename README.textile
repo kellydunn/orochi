@@ -2,6 +2,8 @@ h1. orochi
 
 p. A ruby gem that helps ActiveRecord-ize directions and route data.
 
+p. Note: this gem has only been tested in Rails 3
+
 h2. setup
 
 pre. sudo gem install orochi
