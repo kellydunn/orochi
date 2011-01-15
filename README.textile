@@ -2,8 +2,8 @@ h1. orochi
 
 h2. setup
 
-pre. sudo gem install odin
-rake odin:awaken
+pre. sudo gem install orochi
+rake orochi:awaken
 
 h2. usage
 
