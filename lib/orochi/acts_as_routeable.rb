@@ -76,6 +76,10 @@ module Orochi
       end
 
       def polyline
+        routes.first.each_step do |step|
+          puts step.polyline_json
+          puts
+        end
       end
 
       def directions_to

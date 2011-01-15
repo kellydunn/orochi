@@ -1,4 +1,4 @@
-class OdinMigration < ActiveRecord::Migration
+class OrochiMigration < ActiveRecord::Migration
   def self.up
     create_table :routers do |t|
       t.string :start
