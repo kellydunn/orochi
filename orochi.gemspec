@@ -5,7 +5,7 @@
 
 Gem::Specification.new do |s|
   s.name = %q{orochi}
-  s.version = "0.0.0"
+  s.version = "0.0.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["kellydunn"]
@@ -38,8 +38,8 @@ Gem::Specification.new do |s|
     "lib/orochi/railtie.rb",
     "lib/rails_templates/default_template.rb",
     "orochi.gemspec",
+    "spec/gem/acts_as_routeable_spec.rb",
     "spec/helpers/core.rb",
-    "spec/odin_spec.rb",
     "spec/rake/migration_spec.rb",
     "spec/rake/rake_spec.rb",
     "spec/spec_helper.rb"
@@ -50,8 +50,8 @@ Gem::Specification.new do |s|
   s.rubygems_version = %q{1.3.7}
   s.summary = %q{An easy way to ActiveRecord-ize directions and route data}
   s.test_files = [
+    "spec/gem/acts_as_routeable_spec.rb",
     "spec/helpers/core.rb",
-    "spec/odin_spec.rb",
     "spec/rake/migration_spec.rb",
     "spec/rake/rake_spec.rb",
     "spec/spec_helper.rb"
