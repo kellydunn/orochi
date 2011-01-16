@@ -40,6 +40,10 @@ p. Now you're set up and ready to go!
 
 h2. ghetto usage
 
-pre. your_model_instance.router.start = "a_start_address"
-your_model_instance.router.stop = "a_stop_address"
+pre. your_model_instance.set_endpoints!("start_address", "stop_address")
 your_model_instance.route!
+
+p. Now you can do some of the following:
+
+pre.# Get the polyline of your route
+your_model_instance.polyline

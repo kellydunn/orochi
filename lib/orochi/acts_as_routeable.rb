@@ -76,10 +76,11 @@ module Orochi
       end
 
       def polyline
+        polyline = []
         routes.first.each_step do |step|
-          puts step.polyline_json
-          puts
+          polyline.push(step.polyline_json.to_a)
         end
+        polyline.flatten
       end
 
       def directions_to
