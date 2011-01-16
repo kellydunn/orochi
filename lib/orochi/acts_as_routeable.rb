@@ -57,7 +57,7 @@ module Orochi
                 polyline.push([point[0], point[1]])
               end
               
-              s.polyline_json = polyline
+              s.polyline_json = polyline.inspect
               s.directions_json = leg_step["html_instructions"]
               s.save!
             end
