@@ -45,5 +45,5 @@ your_model_instance.route!
 
 p. Now you can do some of the following:
 
-pre.# Get the polyline of your route
+pre. # Get the polyline of your route
 your_model_instance.polyline
