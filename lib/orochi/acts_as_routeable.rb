@@ -24,7 +24,7 @@ module Orochi
       def request_routes
         request_str = "http://maps.googleapis.com/maps/api/directions/json?sensor=false&"
 
-
+        alternatives = true
         # TODO accept hash of options, build request string
         alt = "alternatives=#{(alternatives)? true : false}&"
         request_str += alt
@@ -94,6 +94,16 @@ module Orochi
           directions.push(step.directions_json.to_s)
         end
         directions
+      end
+
+      def reverse
+        # TODO find_or_create_by
+        reversed_router = Router.where({:start => self.router.stop, :stop => self.router.start})
+        if reversed_router.nil? || reversed_router.empty?
+          reversed_router = Router.create({:start => self.router.stop, :stop => self.router.start})
+          reversed_router.route!
+        end
+        reversed_router
       end
 
     end
