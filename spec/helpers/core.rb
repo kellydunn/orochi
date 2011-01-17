@@ -21,7 +21,7 @@ module CoreHelper
   end
 
   def mock_rails_env
-    database_yml = 'gem_test/config/database.yml'
+    database_yml = '/../staging/gem_test/config/database.yml'
     if File.exists?(database_yml)
       active_record_configuration = YAML.load_file(database_yml)["mysql"]
       
@@ -31,7 +31,7 @@ module CoreHelper
       ActiveRecord::Base.silence do
         ActiveRecord::Migration.verbose = false
         
-        load(File.dirname(__FILE__) + 'gem_test/db/schema.rb')
+        load(File.dirname(__FILE__) + '/../staging/gem_test/db/schema.rb')
         Dir.new(File.join(File.dirname(__FILE__), "../../lib/generators/orochi/templates/models")).each do |file|
           load(file) if !File.directory?(file)          
         end
