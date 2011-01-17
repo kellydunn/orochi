@@ -22,7 +22,12 @@ module Orochi
     
     module InstanceMethods
       def request_routes
-        request_str = "http://maps.googleapis.com/maps/api/directions/json?sensor=false&alternatives=true&"
+        request_str = "http://maps.googleapis.com/maps/api/directions/json?sensor=false&"
+
+
+        # TODO accept hash of options, build request string
+        alt = "alternatives=#{(alternatives)? true : false}&"
+        request_str += alt
 
         start = self.router.start
         request_str += "origin=#{CGI::escape(start)}&"
