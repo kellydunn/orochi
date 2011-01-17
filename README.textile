@@ -45,5 +45,6 @@ your_model_instance.route!
 
 p. Now you can do some of the following:
 
-pre. # Get the polyline of your route
-your_model_instance.polyline
+pre. your_model_instance.polyline # Polyline representation for Google Maps
+your_model_instance.directions # List of directions
+your_model_instance.reverse # A creates a router with the reversed address + routes
