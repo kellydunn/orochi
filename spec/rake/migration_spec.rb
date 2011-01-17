@@ -18,5 +18,7 @@ describe "Migration rake" do
     success.should_not be_nil
   end
 
-  it "should automatically apply the necessary migrations"
+  it "should automatically apply the necessary migrations" do
+    r = Route.new
+  end
 end

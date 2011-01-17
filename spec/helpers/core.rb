@@ -21,21 +21,25 @@ module CoreHelper
   end
 
   def mock_rails_env
-    database_yml = '/../staging/gem_test/config/database.yml'
+    database_yml = File.join(File.dirname(__FILE__), '../staging/gem_test/config/database.yml')
+    system("echo #{database_yml}")
     if File.exists?(database_yml)
       active_record_configuration = YAML.load_file(database_yml)["mysql"]
       
       ActiveRecord::Base.establish_connection(active_record_configuration)
-      # ActiveRecord::Base.logger = Logger.new(File.join(File.dirname(__FILE__), "debug.log"))
+      ActiveRecord::Base.logger = Logger.new(File.join(File.dirname(__FILE__), "debug.log"))
       
       ActiveRecord::Base.silence do
         ActiveRecord::Migration.verbose = false
         
         load(File.dirname(__FILE__) + '/../staging/gem_test/db/schema.rb')
-        Dir.new(File.join(File.dirname(__FILE__), "../../lib/generators/orochi/templates/models")).each do |file|
+        system("pwd")
+        Dir.new(File.join(File.dirname(__FILE__), "/../../lib/generators/orochi/templates/models")).each do |file|
           load(file) if !File.directory?(file)          
         end
       end
+    else
+      system("echo ':('")
     end
   end
 end
