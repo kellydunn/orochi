@@ -2,10 +2,10 @@ require "spec_helper"
 
 module CoreHelper
   def create_rails_app
-    Dir.chdir("spec/staging")
+    Dir.chdir(File.join(File.dirname(__FILE__), "../staging"))
     system("rails new gem_test -d mysql -m ../../lib/rails_templates/default_template.rb >> /dev/null")
     puts "== Created rails application ====="
-    require "../staging/gem_test/config/environment.rb"
+    require "../gem_test/config/environment.rb"
   end
   
   def destroy_rails_app
