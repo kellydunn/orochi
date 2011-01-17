@@ -7,6 +7,7 @@ module CoreHelper
     puts "== Created rails application ====="
     system("pwd")
     require "gem_test/config/environment.rb"
+    mock_rails_env
   end
   
   def destroy_rails_app
