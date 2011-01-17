@@ -83,11 +83,14 @@ module Orochi
         polyline.flatten
       end
 
-      def directions_to
+      def directions
+        directions = []
+        routes.first.each_step do |step|
+          directions.push(step.directions_json.to_s)
+        end
+        directions
       end
 
-      def directions_from
-      end
     end
   end
 end
