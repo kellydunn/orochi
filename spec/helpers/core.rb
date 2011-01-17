@@ -5,6 +5,7 @@ module CoreHelper
     Dir.chdir("spec/staging")
     system("rails new gem_test -d mysql -m ../../lib/rails_templates/default_template.rb >> /dev/null")
     puts "== Created rails application ====="
+    require "../staging/gem_test/config/environment.rb"
   end
   
   def destroy_rails_app
