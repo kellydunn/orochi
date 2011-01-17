@@ -9,7 +9,7 @@ h2. setup
 pre. sudo gem install orochi
 rake orochi:awaken
 
-h2. usage
+h2. quick start
 
 p. Orochi needs to know which models you intend to make routeable.  So any model that has a start and stop destination can be represented as:
 
@@ -38,7 +38,7 @@ pre. db:migrate
 
 p. Now you're set up and ready to go!
 
-h2. ghetto usage
+h2. usage
 
 pre. your_model_instance.set_endpoints!("start_address", "stop_address")
 your_model_instance.route!
