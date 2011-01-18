@@ -41,9 +41,8 @@ module Orochi
               polyline_data = GoogleMapsPolyline.decode_polyline(leg_points, leg_levels)
               
               # TODO use inject
-              polyline = []
-              polyline_data.collect do |point|
-                polyline.push([point[0], point[1]])
+              polyline = polyline_data.inject([]) do |acc, point|
+                acc << ([point[0], point[1]])
               end
               
               s.polyline_json = polyline.inspect
