@@ -59,6 +59,9 @@ module Orochi
       end
 
       def set_endpoints!(start, stop)
+        if self.router.nil?
+          self.router = Router.create!
+        end
         self.router.start = start
         self.router.stop = stop
         self.router.save!
