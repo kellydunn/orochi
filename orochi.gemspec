@@ -37,10 +37,10 @@ Gem::Specification.new do |s|
     "lib/orochi/acts_as_routeable.rb",
     "lib/orochi/railtie.rb",
     "lib/rails_templates/default_template.rb",
-    "orochi-0.0.6.gem",
     "orochi.gemspec",
-    "spec/gem/acts_as_routeable_spec.rb",
+    "spec/acts_as_routeable/acts_as_routeable_spec.rb",
     "spec/helpers/core.rb",
+    "spec/helpers/debug.log",
     "spec/rake/migration_spec.rb",
     "spec/rake/rake_spec.rb",
     "spec/spec_helper.rb"
@@ -51,11 +51,34 @@ Gem::Specification.new do |s|
   s.rubygems_version = %q{1.3.7}
   s.summary = %q{An easy way to ActiveRecord-ize directions and route data}
   s.test_files = [
-    "spec/gem/acts_as_routeable_spec.rb",
+    "spec/acts_as_routeable/acts_as_routeable_spec.rb",
     "spec/helpers/core.rb",
     "spec/rake/migration_spec.rb",
     "spec/rake/rake_spec.rb",
-    "spec/spec_helper.rb"
+    "spec/spec_helper.rb",
+    "spec/staging/gem_test/app/controllers/application_controller.rb",
+    "spec/staging/gem_test/app/helpers/application_helper.rb",
+    "spec/staging/gem_test/app/models/leg.rb",
+    "spec/staging/gem_test/app/models/route.rb",
+    "spec/staging/gem_test/app/models/router.rb",
+    "spec/staging/gem_test/app/models/step.rb",
+    "spec/staging/gem_test/config/application.rb",
+    "spec/staging/gem_test/config/boot.rb",
+    "spec/staging/gem_test/config/environment.rb",
+    "spec/staging/gem_test/config/environments/development.rb",
+    "spec/staging/gem_test/config/environments/production.rb",
+    "spec/staging/gem_test/config/environments/test.rb",
+    "spec/staging/gem_test/config/initializers/backtrace_silencers.rb",
+    "spec/staging/gem_test/config/initializers/inflections.rb",
+    "spec/staging/gem_test/config/initializers/mime_types.rb",
+    "spec/staging/gem_test/config/initializers/secret_token.rb",
+    "spec/staging/gem_test/config/initializers/session_store.rb",
+    "spec/staging/gem_test/config/routes.rb",
+    "spec/staging/gem_test/db/migrate/20110117235527_orochi_migration.rb",
+    "spec/staging/gem_test/db/schema.rb",
+    "spec/staging/gem_test/db/seeds.rb",
+    "spec/staging/gem_test/test/performance/browsing_test.rb",
+    "spec/staging/gem_test/test/test_helper.rb"
   ]
 
   if s.respond_to? :specification_version then
