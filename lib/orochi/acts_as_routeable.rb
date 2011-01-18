@@ -40,7 +40,6 @@ module Orochi
               leg_levels = leg_step["polyline"]["levels"]
               polyline_data = GoogleMapsPolyline.decode_polyline(leg_points, leg_levels)
               
-              # TODO use inject
               polyline = polyline_data.inject([]) do |acc, point|
                 acc << ([point[0], point[1]])
               end
@@ -58,6 +57,7 @@ module Orochi
       end
 
       def set_endpoints!(start, stop)
+        # TODO find_or_create_by
         if self.router.nil?
           self.router = Router.create!
         end
@@ -67,6 +67,7 @@ module Orochi
       end
 
       def polyline
+        # TODO abstract into helper
         polyline = []
         routes.first.each_step do |step|
           polyline.push(step.polyline_json.to_a)
@@ -75,6 +76,7 @@ module Orochi
       end
 
       def directions
+        # TODO abstract into helper
         directions = []
         routes.first.each_step do |step|
           directions.push(step.directions_json.to_s)
