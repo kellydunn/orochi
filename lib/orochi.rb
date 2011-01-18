@@ -24,7 +24,7 @@ module Orochi
       request_str += "alternatives=true&"
       
       options.each do |k, v|
-        request_str += "&#{k}=#{CGI:escape(v)}"
+        request_str += "&#{k}=#{CGI::escape(v)}"
       end
 
       response = open(request_str)
