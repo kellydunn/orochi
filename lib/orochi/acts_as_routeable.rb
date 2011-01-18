@@ -94,6 +94,15 @@ module Orochi
         reversed_router
       end
 
+      # PRE point needs to be a tuple [lat, lng] (for now)
+      # TODO point of inclusion
+      def includes?(point)
+        self.polyline.any? do |step_json|
+          polyline_array = eval step_json
+          step_json.include?(point)
+        end
+      end
+
     end
   end
 end
