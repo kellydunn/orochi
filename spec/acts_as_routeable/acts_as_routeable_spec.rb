@@ -3,8 +3,6 @@ require 'spec_helper'
 describe "A model acting as routeable" do
   include CoreHelper
 
-#  create_rails_app
-
   context "setting endpoints" do
     it "should be able to set its stopping and starting endpoints" 
     it "should not be able to route if no endpoints are set"
@@ -16,5 +14,4 @@ describe "A model acting as routeable" do
     it "should be able to grab a polyline after being routed"
   end
 
-#  destroy_rails_app
 end
