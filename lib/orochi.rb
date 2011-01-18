@@ -13,7 +13,10 @@ end
 module Orochi
   class GoogleClient
     def self.request(options = {})
-      # TODO create request string, make request, return JSON
+      options.each do |k, v|
+        puts k
+        puts v
+      end
     end
   end
 end
