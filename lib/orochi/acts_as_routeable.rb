@@ -99,7 +99,7 @@ module Orochi
       def includes?(point)
         self.polyline.any? do |step_json|
           polyline_array = eval step_json
-          step_json.include?(point)
+          polyline_array.include?(point)
         end
       end
 

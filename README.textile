@@ -48,3 +48,4 @@ p. Now you can do some of the following:
 pre. your_model_instance.polyline # Polyline representation for Google Maps
 your_model_instance.directions # List of directions
 your_model_instance.reverse # A creates a router with the reversed address + routes
+your_model_instance.includes?(point_of_interest) # Returns if point of interest is within your route
