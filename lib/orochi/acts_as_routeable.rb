@@ -1,5 +1,3 @@
-require 'net/https'
-require 'open-uri'
 require 'json'
 require 'googlemaps_polyline/version'
 require 'googlemaps_polyline/core'
@@ -27,7 +25,7 @@ module Orochi
 
 
       def route!
-        json = self.request_routes
+        json = self.request_routes({:origin => self.router.start, :destination => self.router.stop})
         json_routes = json["routes"]
         json_routes.each do |route|
           r = self.router.routes.create!
